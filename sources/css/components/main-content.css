@@ -4,4 +4,10 @@
     margin-right: auto;
     background-color: var(--color-pomb-and-power);
     border: 2px solid var(--color-floral-white);
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }

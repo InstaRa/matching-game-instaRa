@@ -1,0 +1,15 @@
+.score-game {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: var(--color-floral-white);
+    font-family: var(--font-family-main);
+    box-sizing: border-box;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.score-game .player {
+    font-size: var(--font-size-default);
+}

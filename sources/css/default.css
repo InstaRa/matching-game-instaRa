@@ -1,0 +1,26 @@
+:root {
+
+    /* THEME COLORS */
+    --color-arsenic: #3A4042;
+    --color-floral-white: #FFFCEE;
+    --color-old-silver: #828282;
+    --color-eggshell: #EAE6DA;
+    --color-alura: #051932;
+    --color-pomb-and-power: #7C5E99;
+    --color-fiery-rose: #F25A70;
+    --color-cardinal: #BA1F33;
+    --color-sandstorm: #F5D547;
+    --color-mantis: #62C370;
+
+
+
+    /* THEME SIZES */
+    --font-size-default: 10px;
+    --font-size-subtitle: 18px;
+    --font-size-title: 25px;
+
+
+
+    /* THEME FAMILIES */
+    --font-family-main: "Press Start 2P";
+}

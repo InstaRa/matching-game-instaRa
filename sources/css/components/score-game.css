@@ -5,11 +5,71 @@
     color: var(--color-floral-white);
     font-family: var(--font-family-main);
     box-sizing: border-box;
+    align-items: center;
 
     padding-left: 20px;
     padding-right: 20px;
+    position: relative;
 }
 
 .score-game .player {
     font-size: var(--font-size-default);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.score-game .vs {
+    font-size: 8px;
+    color: var(--color-sandstorm);
+}
+
+.score-game .pointer {
+    width: 20px;
+    position: absolute;
+    bottom: 100%;
+    left: calc(50% - 10px);
+    transition: transform 300ms ease-in-out;
+}
+
+
+/* SCORE BACKGROUND */
+.score-game .player[data-score="1"] .score-player .point:nth-child(1){
+    background-color: var(--color-mantis);
+}
+
+.score-game .player[data-score="2"] .score-player .point:nth-child(-n+2){
+    background-color: var(--color-mantis);
+}
+
+.score-game .player[data-score="3"] .score-player .point:nth-child(-n+3){
+    background-color: var(--color-mantis);
+}
+
+
+/* POINTER TURN - PLAYER 1 */
+.score-game[data-turn="1"] .player.-one[data-score="2"] ~ .pointer{
+    transform: translateX(-22px);
+}
+
+.score-game[data-turn="1"] .player.-one[data-score="1"] ~ .pointer{
+    transform: translateX(-38px);
+}
+
+.score-game[data-turn="1"] .player.-one[data-score="0"] ~ .pointer{
+    transform: translateX(-54px);
+}
+
+/* POINTER TURN - PLAYER 2 */
+.score-game[data-turn="2"] .player.-two[data-score="2"] ~ .pointer{
+    transform: translateX(22px);
+}
+
+.score-game[data-turn="2"] .player.-two[data-score="1"] ~ .pointer{
+    transform: translateX(38px);
+}
+
+.score-game[data-turn="2"] .player.-two[data-score="0"] ~ .pointer{
+    transform: translateX(54px);
 }

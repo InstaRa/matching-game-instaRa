@@ -21,6 +21,7 @@
     <!-- STYLES SETTINGS -->
     <link rel="stylesheet" href="/sources/css/components/main-content.css">
     <link rel="stylesheet" href="/sources/css/components/score-game.css">
+    <link rel="stylesheet" href="/sources/css/components/score-player.css">
     <link rel="stylesheet" href="/sources/css/components/card-game.css">
     <!--/ STYLES SETTINGS -->
 
@@ -28,9 +29,30 @@
 
 <body class="main-content">
 
-    <section class="score-game">
-        <h3 class="player">Player 1</h3>
-        <h3 class="player">Player 2</h3>
+    <section class="score-game" data-turn="1">
+        <h3 class="player -one" data-score="2">
+            Player1
+
+            <div class="score-player">
+                <span class="point">1</span>
+                <span class="point">2</span>
+                <span class="point">3</span>
+            </div>
+        </h3>
+        
+        <span class="vs">vs</span>
+
+        <h3 class="player -two" data-score="1">
+            <div class="score-player -reverse">
+                <span class="point">3</span>
+                <span class="point">2</span>
+                <span class="point">1</span>
+            </div>
+
+            Player2
+        </h3>
+
+        <img class="pointer" src="/sources/images/icon-arrow-down.png" alt="Ponteiro do placar">
     </section>
 
     <!-- HTML 5 -->
@@ -95,8 +117,6 @@
             <img src="/sources/images/alura-pixel.png" alt="Logo da Alura em pixel arte">
         </figure>
     </article>
-
-
 </body>
 
 </html>

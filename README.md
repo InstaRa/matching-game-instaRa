@@ -8,4 +8,4 @@ My version of the app created in course - Curso de JavaScript para React - Marco
 [Curso de JavaScript para react](https://www.youtube.com/watch?v=aUDgoPsrPNg&list=PLirko8T4cEmzWZVn_ZKQbfDOuCnSZJ4va)
 
 ## Link to Design in figma
-[Design do projeto](https://www.figma.com/file/TcmjoHKPS8faarQoHnKV4C/Curso_de_HTML_e_CSS_feliz)
+[Design do projeto](https://www.figma.com/file/k8GPJJNlqcjXvnF6Nmk2XL/Matching-game)

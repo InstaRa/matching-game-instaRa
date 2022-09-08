@@ -10,4 +10,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
+
+    perspective: 1000px;
 }

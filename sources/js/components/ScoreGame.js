@@ -5,14 +5,27 @@ const $playerTwo = $score.querySelector('.player.-two');
 
 function ScoreGame(player) {
     const Score = {};
+    Score.turn = $score.dataset.turn;
 
     Score.changeTurn = () => {
-        const turn = $score.dataset.turn;
-        
-        if(turn == 0 || turn == 2){
-            $score.dataset.turn = 1
+
+        if(Score.turn != 1){
+            $score.dataset.turn = 1;
+            Score.turn = 1;
         }else{
-            $score.dataset.turn = 2
+            $score.dataset.turn = 2;
+            Score.turn = 2;
+        }
+    }
+
+    Score.addPoint = () => {
+        switch(Score.turn) {
+            case 1:
+                $playerOne.dataset.score++;
+                break;
+            case 2:
+                $playerTwo.dataset.score++;
+                break;
         }
     }
 

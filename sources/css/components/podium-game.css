@@ -5,12 +5,15 @@
     height: 100%;
     width: 100%;
     background-color: var(--color-arsenic);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-
     padding: 20px;
     box-sizing: border-box;
+}
+
+.podium-game.-show {
+    display: flex;
 }
 
 .podium-game .winner {

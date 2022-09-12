@@ -1,0 +1,5 @@
+.player-name {
+    color: var(--color-eggshell);
+    font-size: 18px;
+    font-family: var(--font-family-main);
+}

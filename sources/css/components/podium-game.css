@@ -8,6 +8,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .podium-game .winner {
@@ -18,4 +21,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    padding: 25px 20px 20px;
+    gap: 10px;
+}
+
+.podium-game .icon-trophy {
+    width: 60px;
 }

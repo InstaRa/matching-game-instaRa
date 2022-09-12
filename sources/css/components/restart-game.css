@@ -1,0 +1,11 @@
+.restart-game {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--color-fiery-rose);
+    border-color: #FFF;
+    color: var(--color-floral-white);
+    font-size: 18px;
+    font-family: var(--font-family-main);
+}

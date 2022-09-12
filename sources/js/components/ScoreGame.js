@@ -45,6 +45,7 @@ function ScoreGame(player) {
         $playerOne.dataset.score = 0;
         $playerTwo.dataset.score = 0;
         $score.dataset.turn = 1;
+        $score.turn = 1;
     }
 
     return Score;

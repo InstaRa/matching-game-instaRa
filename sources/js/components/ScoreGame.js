@@ -40,6 +40,13 @@ function ScoreGame(player) {
         return $playerOne.dataset.score > $playerTwo.dataset.score ? "Player1" : "Player2";
     }
 
+    Score.resetScores = () => {
+        Score.totalPoints = 0;
+        $playerOne.dataset.score = 0;
+        $playerTwo.dataset.score = 0;
+        $score.dataset.turn = 1;
+    }
+
     return Score;
 }
 

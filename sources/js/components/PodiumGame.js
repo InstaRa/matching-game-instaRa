@@ -10,6 +10,10 @@ function PodiumGame() {
         $podium.classList.add('-show')
     }
 
+    $podium.hide = () => {
+        $podium.classList.remove('-show')
+    }
+
     $podium.getRestartButton = () => {
         return $podium.querySelector('.restart-game');
     }

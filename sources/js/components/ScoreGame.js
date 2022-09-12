@@ -6,6 +6,7 @@ const $playerTwo = $score.querySelector('.player.-two');
 function ScoreGame(player) {
     const Score = {};
     Score.turn = $score.dataset.turn;
+    Score.totalPoints = 0;
 
     Score.changeTurn = () => {
 
@@ -27,6 +28,16 @@ function ScoreGame(player) {
                 $playerTwo.dataset.score++;
                 break;
         }
+
+        Score.totalPoints++;
+    }
+
+    Score.anyWinner = () => {
+        if(Score.totalPoints < 3) {
+            return false;
+        }
+
+        return $playerOne.dataset.score > $playerTwo.dataset.score ? "Player1" : "Player2";
     }
 
     return Score;

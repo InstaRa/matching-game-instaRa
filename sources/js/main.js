@@ -1,5 +1,6 @@
 import CardGame from "./components/CardGame.js";
 import ScoreGame from "./components/ScoreGame.js"
+import PodiumGame from "./components/PodiumGame.js"
 
 function Game() {
 
@@ -7,13 +8,15 @@ function Game() {
     const app = document.getElementById('app');
     let firstCard = null;
     let lastCard = null;
-    
+
     // LOADING FUNCTIONS
     app.score = ScoreGame();
     app.deck = CardGame();
+    app.podium = PodiumGame();
 
     // START GAME
     app.score.changeTurn();
+    app.buttonReset = app.podium.getRestartButton();
 
     app.addEventListener('click', function (event) {
         const target = event.target;
@@ -34,25 +37,33 @@ function Game() {
             } else {
                 lastCard = card;
             }
+        }else{
+            return false;
         }
 
         if (firstCard && lastCard) {
-            if (!app.checkCardMatch()) {                
-                setTimeout(() => {                    
+            if (!app.checkCardMatch()) {
+                setTimeout(() => {
                     app.resetAllCards();
                     app.score.changeTurn()
 
                 }, 2000);
-            }else{
+            } else {
 
                 app.score.addPoint();
                 firstCard = null;
                 lastCard = null;
             }
         }
+
+        if (app.score.anyWinner()) {
+            const player = app.score.anyWinner();
+            app.podium.winnerName(player);
+            app.podium.show()
+        }
     })
 
-    app.getCard = (target) => {        
+    app.getCard = (target) => {
         return target.closest('.card-game')
     }
 
@@ -66,13 +77,18 @@ function Game() {
 
         firstReset.hide();
         firstReset.selected = false;
-        
+
         const lastReset = lastCard;
         lastCard = null;
-        
+
         lastReset.hide();
         lastReset.selected = false;
     }
+
+    app.buttonReset.addEventListener('click', function () {
+        app.resetAllCards();
+        app.podium.hide();
+    });
 }
 
 // EXECUTE GAME

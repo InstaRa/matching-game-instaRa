@@ -22,10 +22,21 @@ function CardGame() {
         $card.fingerprint = () => {
             return btoa($card.innerHTML);
         }
-        
+
         // Checks if this card has been selected
         $card.selected = false;
     });
+
+    $deck.resetCards = () => {
+        $deck.forEach($card => {
+            $card.classList.remove('-flip')
+            $card.selected = false;
+        });
+    }
+
+    $deck.sortCards = () => {
+        console.log($deck);
+    }
 
     return $deck;
 }

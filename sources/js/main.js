@@ -86,8 +86,10 @@ function Game() {
     }
 
     app.buttonReset.addEventListener('click', function () {
-        app.resetAllCards();
         app.podium.hide();
+        app.deck.resetCards();
+        app.score.resetScores();
+        app.deck.sortCards();
     });
 }
 

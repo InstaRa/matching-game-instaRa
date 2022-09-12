@@ -1,0 +1,17 @@
+.podium-game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-arsenic);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.podium-game .winner {
+    background-color: var(--color-pomb-and-power);
+    border: 4px solid var(--color-floral-white);
+    text-align: center;
+}

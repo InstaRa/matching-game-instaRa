@@ -16,6 +16,7 @@ function Game() {
 
     // START GAME
     app.score.changeTurn();
+    app.deck.sortCards();
     app.buttonReset = app.podium.getRestartButton();
 
     app.addEventListener('click', function (event) {

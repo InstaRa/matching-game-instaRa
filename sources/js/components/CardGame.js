@@ -35,7 +35,22 @@ function CardGame() {
     }
 
     $deck.sortCards = () => {
-        console.log($deck);
+        const $sortDeck = [];
+        let count = 0;
+
+        $deck.forEach($card => {
+            $sortDeck[count] = $card;
+            count++;
+        });
+
+        // Element reference to insert cards
+        const $score = document.querySelector('.score-game')
+        for(let i = $sortDeck.length - 1; i >= 0; i--){
+            const indexPosition = Math.floor(Math.random() * i);
+            const repositionElement = $sortDeck[indexPosition];
+            $sortDeck.splice(indexPosition, 1)
+            $score.insertAdjacentElement('afterend', repositionElement);
+        }
     }
 
     return $deck;
